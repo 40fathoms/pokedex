@@ -126,7 +126,9 @@ const PokemonData = (props: any) => {
     const description = props.extendedPokemonData.flavor_text_entries[1].flavor_text.replace('\f', ' ')
 
     return (
-        <Styles.Section className={night ? "night" : ""}>
+        <Styles.Section 
+            className={night ? "night" : ""}
+        >
 
             <Styles.Title>
                 <h1>#{pokemonNumber()} - {pokemonName}</h1>

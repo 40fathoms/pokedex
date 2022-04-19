@@ -386,10 +386,15 @@ export const EvolutionPokemon = styled.div`
   }
 
   img{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     border-radius: 0.5rem;
+
+    @media (min-width: 1040px){
+      width: 100px;
+      height: 100px;
+    }
   }
 `
 

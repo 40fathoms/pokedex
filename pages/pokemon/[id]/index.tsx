@@ -21,6 +21,14 @@ const Index = (props: any) => {
         setMobileMenuIsShown(prev => !prev)
     }
 
+    React.useEffect(()=>{
+        if(mobileMenuIsShown){
+            document.body.style.overflow = "hidden";
+        }
+        else{
+            document.body.style.overflow = "auto";
+        }
+    }, [mobileMenuIsShown])
 
     return (
         <>

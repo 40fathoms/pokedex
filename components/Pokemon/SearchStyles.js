@@ -58,7 +58,7 @@ export const Logo = styled.img`
 
 export const About = styled.p`
   color: white;
-
+  text-align: center;
 `
 
 export const InputSection = styled.div`
@@ -96,8 +96,12 @@ export const InputSection = styled.div`
 `
 
 export const Nav = styled.nav`
-    height: 70vh;
+    height: 55vh;
     overflow-x: auto;  
+
+    @media (min-width: 1040px){
+      height: 60vh;
+    }
     
 
     &::-webkit-scrollbar {
