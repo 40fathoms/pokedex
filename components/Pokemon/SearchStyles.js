@@ -12,6 +12,8 @@ export const Section = styled.section`
   
   padding: 1rem 2rem;
 
+  z-index:2;
+
   @media(min-width: 1040px){
     padding: 2rem;
   }

@@ -4,7 +4,7 @@ import {BsSun, BsMoon} from 'react-icons/bs'
 
 import * as Styles from './PokemonStyles.js'
 
-const pokemon = (props: any) => {
+const PokemonData = (props: any) => {
 
     // Night mode
     const [night, setNight] = React.useState(false)
@@ -193,4 +193,4 @@ const pokemon = (props: any) => {
     );
 }
 
-export default pokemon;
+export default PokemonData;

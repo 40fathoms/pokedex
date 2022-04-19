@@ -13,7 +13,7 @@ import GET_SPECIFIC_POKEMON from '../../../graphql/queries/getPokemon'
 
 import * as Styles from '../../../styles/Pokemon.js'
 
-const pokemon = (props: any) => {
+const Index = (props: any) => {
 
     const [mobileMenuIsShown, setMobileMenuIsShown] = React.useState(false)
 
@@ -87,4 +87,4 @@ export const getServerSideProps = async (context: any) => {
     }
 }
 
-export default pokemon
+export default Index
