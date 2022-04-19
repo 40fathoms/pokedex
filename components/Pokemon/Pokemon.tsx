@@ -1,9 +1,17 @@
 import React from 'react'
 import { nanoid } from 'nanoid'
+import {BsSun, BsMoon} from 'react-icons/bs'
 
 import * as Styles from './PokemonStyles.js'
 
 const pokemon = (props: any) => {
+
+    // Night mode
+    const [night, setNight] = React.useState(false)
+
+    const handleNight = () => {
+        setNight(prev => !prev)
+    }
 
 
     // Title syntax
@@ -80,7 +88,7 @@ const pokemon = (props: any) => {
 
     // Evolutions
     const [evolutionChain, setEvolutionChain] = React.useState(Array())
-    
+
     React.useEffect(() => {
         let evolutionChain = Array();
 
@@ -118,12 +126,23 @@ const pokemon = (props: any) => {
     const description = props.extendedPokemonData.flavor_text_entries[1].flavor_text.replace('\f', ' ')
 
     return (
-        <Styles.Section>
+        <Styles.Section className={night ? "night" : ""}>
 
             <Styles.Title>
                 <h1>#{pokemonNumber()} - {pokemonName}</h1>
                 <img src={props.pokemon.sprites.front_default} alt="pokemon picture" />
-                <button>dark mode</button>
+
+                <Styles.Toggle>
+                    <p><BsSun /></p>
+                    <Styles.Slider
+                        className={night ? "night" : ""}
+                        onClick={handleNight}
+                    >
+                        <Styles.Circle className={night ? "night" : ""}></Styles.Circle>
+                    </Styles.Slider>
+                    <p><BsMoon /></p>
+                </Styles.Toggle>
+
             </Styles.Title>
 
             <Styles.Content>
