@@ -4,24 +4,17 @@ import Head from 'next/head'
 
 import Search from '../../../components/Pokemon/Search'
 import Pokemon from '../../../components/Pokemon/Pokemon'
-import Hamburger from '../../../components/Pokemon/Hamburger'
 
 import client from '../../../graphql/client'
 import { GetStaticProps } from 'next'
 import GET_ALL_POKEMONS from '../../../graphql/queries/getPokemons'
 import GET_SPECIFIC_POKEMON from '../../../graphql/queries/getPokemon'
+import GET_EVOLUTION_CHAIN from '../../../graphql/queries/getEvolutionChain'
 
 import * as Styles from '../../../styles/Pokemon.js'
 
 const pokemon = (props: any) => {
-
-    const [mobileMenuIsShown, setMobileMenuIsShown] = React.useState(false)
-
-    const handleMobile = () => {
-        setMobileMenuIsShown(prev => !prev)
-    }
-
-
+    
     return (
         <>
             <Head>
@@ -30,16 +23,8 @@ const pokemon = (props: any) => {
 
             <Styles.Main>
 
-                <Hamburger
-                    mobileMenuIsShown={mobileMenuIsShown}
-                    handleMobile={handleMobile}
-                />
-
                 <Search
                     pokemons={props.results}
-
-                    mobileMenuIsShown={mobileMenuIsShown}
-                    handleMobile={handleMobile}
                 />
 
                 <Pokemon
@@ -47,7 +32,7 @@ const pokemon = (props: any) => {
                     extendedPokemonData={props.extendedPokemonData}
                     evolution={props.evolution}
                 />
-
+                
             </Styles.Main>
         </>
     )
@@ -64,6 +49,7 @@ export const getServerSideProps = async (context: any) => {
     //Single pokemon
     const variablesSinglePokemon = { name: context.params.id }
     const { pokemon: { ...pokemon } } = await client.request(GET_SPECIFIC_POKEMON, variablesSinglePokemon)
+
 
     /* 
         fetches the flavour text that describes the pokemon.

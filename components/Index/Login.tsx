@@ -38,7 +38,7 @@ const Login = () => {
                 className={`${!emailIsValid ? 'invalid' : ''}`}
             >
                 <div>{/*Covers the button when invalid*/}</div>
-                <Link href='/pokemon/1'><a>Access</a></Link>
+                <Link href='/pokemon/1'><a>Acess</a></Link>
             </button>
 
         </Styles.Login>

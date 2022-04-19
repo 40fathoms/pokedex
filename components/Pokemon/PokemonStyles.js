@@ -2,42 +2,20 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
   
+  height: 100vh;
   width: 100%;
-  padding: 2rem 5%;
+  padding: 0 5%;
 
   background-color: #37c4ff;
   display: flex;
   flex-direction: column;
   gap: 30px;
 
-  @media(max-width: 1340px){
-    padding: 3rem 5% 2rem 5%;
-  }
 
   @media(min-width: 1040px){
-    padding: 0 10% 20px 10%;
-    height: 100vh;
-    overflow:auto;
-  }
-
-  &.night{
-    background-color: #36393E;
-  }
-
-  animation: appear 1s ease-out forwards;
-  @keyframes appear {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
+    padding: 0 10%;
   }
 `
-///////////////////////////////////////////
-
-//Title / header
 
 export const Title = styled.div`
   display:flex;
@@ -47,85 +25,20 @@ export const Title = styled.div`
 
   h1{
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 2.3rem;
     font-weight: 400;
-
-    @media (min-width:1040px){
-      font-size: 2.3rem;
-    }
   }
 
   img{
     margin-right:auto;
-    height: 50px;
-
-    @media (min-width:1040px){
-      height: 80px;
-    }
-  }
-`
-///////////////////////////////////////////
-
-// Light / Dark mode button
-export const Toggle = styled.div`
-  display: flex;
-  align-items: center;
-
-  p {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
+    height: 80px;
   }
 `
 
-export const Slider = styled.div`
-  width: 25px;
-  height: 13px;
-  background-color: #36393E;
-  border-radius: 2rem;
-  margin-inline: 7px;
-  cursor: pointer;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border: 1px solid black;
-  box-sizing: content-box;
-
-
-  &.night{
-      border-color: white;
-      background-color: #F5F5F5;
-      justify-content: flex-end;
-  }
-`
-
-export const Circle = styled.div`
-  height: 13px;
-  width: 13px;
-  background-color: white;
-  border-radius: 50%;
-
-  &.night{
-      background-color: #36393E;
-  }
-`
-///////////////////////////////////////////
-
-// flexbox for both containers Stats/About
 export const Content = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items:center;
   justify-content: space-between;
-  gap:20px;
-
-  @media(min-width: 1040px){
-    align-items:flex-start;
-    flex-direction: row;
-  }
 `
-
-///////////////////////////////////////////
 
 // Stats container
 export const Stats = styled.div`
@@ -133,11 +46,7 @@ display:flex;
 flex-direction: column;
 gap:20px;
 
-width:100%;
-
-@media (min-width:1040px){
-  width:50%;
-}
+width:45%;
 `
 
 export const Image = styled.div`
@@ -151,10 +60,8 @@ export const Image = styled.div`
 
   img{
     border-radius: 0.5rem;
-    max-height:450px;
 
     @media (max-width: 1040px){
-      max-width: 380px;
       width: 100%;
     }
   }
@@ -313,27 +220,27 @@ export const Attribute = styled.h3`
   text-align: center;
 
   &.hp{
-    background-color: #ff4f4b;
+    background-color: red;
   }
 
   &.attack{
-    background-color: #EE8130;
+    background-color: orange;
   }
 
   &.defense{
-    background-color: #F7D02C;
+    background-color: yellow;
   }
 
   &.special-attack{
-    background-color: #0066ff;
+    background-color: blue;
   }
 
   &.special-defense{
-    background-color: #7AC74C;
+    background-color: green;
   }
 
   &.speed{
-    background-color: #D685AD;
+    background-color: pink;
   }
 `
 
@@ -343,11 +250,7 @@ export const About = styled.div`
   flex-direction: column;
   gap:20px;
 
-  width:100%;
-
-  @media (min-width:1040px){
-    width:50%;
-  }
+  width:45%;
 `
 
 export const Evolution = styled.div`

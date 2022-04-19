@@ -42,7 +42,7 @@ const Search = (props: any) => {
     })
 
     return (
-        <Styles.Section className={props.mobileMenuIsShown?'active':''}>
+        <Styles.Section>
 
             <Styles.Content>
 
@@ -67,7 +67,7 @@ const Search = (props: any) => {
             </Styles.Content>
 
 
-            <Styles.Nav onClick={props.handleMobile}>
+            <Styles.Nav>
                 {options}
             </Styles.Nav>
 

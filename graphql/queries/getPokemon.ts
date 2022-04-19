@@ -6,6 +6,8 @@ const GET_SPECIFIC_POKEMON = `
       id
       height
       weight
+      status
+      message
 
       sprites {
         front_default
@@ -37,12 +39,6 @@ const GET_SPECIFIC_POKEMON = `
         }
       }     
       
-      species {
-        name
-        id
-        url
-      }
-
     }
   }
 `

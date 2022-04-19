@@ -15,31 +15,6 @@ export const Section = styled.section`
   @media(min-width: 1040px){
     padding: 2rem;
   }
-
-  @media(max-width: 1340px){
-      position: absolute;
-      top:0;
-      width:100%;
-      display:none;
-      padding: 3rem 2rem 1rem 2rem;
-  }
-
-  &.active{
-    display: flex;
-  }
-
-  animation: appear 1s ease-out forwards;
-  @keyframes appear {
-    from {
-        opacity: 0;
-        transform: translateY(3rem);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-  }
 `
 
 export const Content = styled.div`

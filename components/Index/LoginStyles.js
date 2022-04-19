@@ -29,7 +29,7 @@ export const Login = styled.div`
     button{
         position: relative;
 
-        background-color: #0066ff;
+        background-color: blue;
         border: none;
         color: white;
 
